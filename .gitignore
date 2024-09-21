@@ -9,3 +9,4 @@ data_v[1-6].exe
 *.html
 *.jpg
 *.env
+!example_202409.xlsx
