@@ -1,0 +1,11 @@
+/data*.py
+/a.py
+/dept_code.txt
+/src/data/test*.py
+__pycache__/
+data_v[1-6].*.exe
+data_v[1-6].exe
+*.xlsx
+*.html
+*.jpg
+*.env

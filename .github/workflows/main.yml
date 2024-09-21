@@ -1,0 +1,60 @@
+name: selenium
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  #push:
+    #branches: [ main ]
+  #pull_request:
+    #branches: [ main ]
+  schedule:
+    - cron: "5 7,19 * * *"
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - id: ran_var
+        run: |
+          echo "num=$((RANDOM%1))" >> $GITHUB_ENV
+          echo $num
+        shell: bash
+
+       #Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - if: env.num == '0'
+        name: Checkout
+        uses: actions/checkout@v4
+        
+      - if: env.num == '0'     
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-1
+        
+      - if: env.num == '0'
+        name: 'Set up Python'
+        uses: actions/setup-python@v3
+        with:
+           python-version: 3.11.5
+           
+      - if: env.num == '0'
+        name: 'Install requirements'
+        run: pip install -r ./requirements.txt
+        
+      - if: env.num == '0'
+        uses: browser-actions/setup-chrome@latest
+      - run: echo $CHROME_BIN
+      - if: env.num == '0'
+        run: chrome --version
+      - if: env.num == '0'
+        name: 'Working'
+        run: |
+          python ./data_v6.4.3.py
