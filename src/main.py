@@ -1,8 +1,8 @@
 from tracemalloc import start
-from data.run import run
-from data.onedrive import set_token
+from ncku_course.run import run
+from ncku_course.onedrive import set_token
 from dotenv import load_dotenv
-from data.onedrive import token
+from ncku_course.onedrive import token
 import time
 import sys
 
