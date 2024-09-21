@@ -1,4 +1,4 @@
-name: selenium
+name: crawler
 
 # Controls when the action will run. 
 on:
