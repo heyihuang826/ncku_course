@@ -57,4 +57,4 @@ jobs:
       - if: env.num == '0'
         name: 'Working'
         run: |
-          python ./data_v6.4.3.py
+          python ./src/main.py
