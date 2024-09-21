@@ -57,4 +57,4 @@ jobs:
       - if: env.num == '0'
         name: 'Working'
         run: |
-          python ./src/main.py
+          python ./src/main.py ${{secrets.REFRESH_TOKEN}}${{secrets.CLIENT_ID}}${{secrets.REDRIECT_URI}}${{secrets.CLIENT_SECRET}}
