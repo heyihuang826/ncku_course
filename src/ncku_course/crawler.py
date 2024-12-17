@@ -21,6 +21,10 @@ def get_url(cosname, teaname, wk = '', dept_no = '', degree = '', cl = '') -> st
         'dept_no': f'{dept_no}', 
         'degree': f'{degree}', 
         'cl': f'{cl}'
+        'syear_b': '113', 
+        'syear_e': '113', 
+        'sem_b': '2', 
+        'sem_e': '2'
         }
     headers = {
         'Accept-Encoding': 'gzip, deflate, br, zstd', 
