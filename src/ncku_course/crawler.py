@@ -14,7 +14,7 @@ def get_url(cosname, teaname, wk = '', dept_no = '', degree = '', cl = '') -> st
         raise Exception('error')
     url = 'https://course.ncku.edu.tw/index.php?c=qry11215&m=save_qry'
     payload ={
-        'id': 'CWhUPQU0VTkCfANzADteb1NpCn9VPlRyAz0MZgZqAzxXPlR7UClUIARvVWJXaA4hVXNQcQE4DGFWaFEwCDoEew1wAC4=', 
+        'id': '94', 
         'cosname': f'{cosname}', 
         'teaname': f'{teaname}', 
         'wk': f'{wk}', 
