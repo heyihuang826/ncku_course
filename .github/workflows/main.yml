@@ -30,6 +30,8 @@ jobs:
       - if: env.num == '0'
         name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: feat/add-semester-and-year-params
         
       - if: env.num == '0'     
         uses: actions/cache@v3
