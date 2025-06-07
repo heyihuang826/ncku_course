@@ -1,4 +1,3 @@
-# %%
 import requests
 
 
@@ -21,4 +20,3 @@ def refresh(refresh_token: str, client_id: str,
     refresh_token = result['refresh_token']
     
     return access_token, refresh_token
-# %%
