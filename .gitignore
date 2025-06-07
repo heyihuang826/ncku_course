@@ -10,4 +10,3 @@ data_v[1-6].exe
 *.jpg
 *.env
 !example_202409.xlsx
-temp*.ipynb
