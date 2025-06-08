@@ -1,6 +1,8 @@
 from typing import List
 from bs4 import BeautifulSoup
 import requests
+
+from .crawler_history import get_history_data
 from .const import dept_codes
 import time
 from ._inner_utils import get_time
@@ -135,9 +137,9 @@ def get_info_from_res(res) -> List:
 def crawler(results : List, dept_no : str, session = None) -> None:
     if not session:
         session = requests.Session()
-    url = get_url('', '', dept_no = dept_no)
-    res = session.get(url)
-    result = get_info_from_res(res)
+    # url = get_url('', '', dept_no = dept_no)
+    # res = session.get(url)
+    result = get_history_data(dept_no, session)  # get_info_from_res(res)
     print(f"程式於 {dept_codes[dept_no]} 完成抓取 {len(result)} 筆課程資料")
     results.extend(result)
 
