@@ -1,0 +1,33 @@
+GET /bootstrap/js/jquery.min.js HTTP/1.1
+GET /bootstrap/js/jquery.min.js?20250608 HTTP/1.1
+GET /bootstrap/js/bootstrap.js?20250608 HTTP/1.1
+GET /bootstrap/js/main.js?20250608 HTTP/1.1
+GET /bootstrap/js/wow.min.js?20250608 HTTP/1.1
+GET /bootstrap/js/multimodal.min.js?20250608 HTTP/1.1
+GET /js/modernizr-custom.js?20250608 HTTP/1.1
+GET /js/bootstrap-select/js/bootstrap-select.min.js?20250608 HTTP/1.1
+GET /js/common.js?20250608 HTTP/1.1
+GET /js/mis_grid.js?20250608 HTTP/1.1
+GET /js/performance.now-polyfill.js?20250608 HTTP/1.1
+GET /js/mdb-sortable/js/addons/jquery-ui-touch-punch.min.js?20250608 HTTP/1.1
+GET /js/jquery.taphold.js?20250608 HTTP/1.1
+GET /js/jquery.patch.js?20250608 HTTP/1.1
+GET /js/jquery.cookie.js?20250608 HTTP/1.1
+GET /nf/commons/v2.1.1/js/jquery.blockUI.js?20250608 HTTP/1.1
+
+Accept: */*
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: zh-TW,zh;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Cookie: PHPSESSID=582e9bfe93c01630e30d993af919b231
+Host: course-query.acad.ncku.edu.tw
+Pragma: no-cache
+Referer: https://course-query.acad.ncku.edu.tw/index.php?c=qry11215&m=en_query
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+sec-ch-ua: "Google Chrome";v="137", "Chromium";v="137", "Not/A)Brand";v="24"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
