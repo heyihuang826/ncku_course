@@ -244,21 +244,21 @@ def get_info_from_res(res) -> List:
 
 js_paths = [
     '/bootstrap/js/jquery.min.js',
-    '/bootstrap/js/jquery.min.js?20250608',
-    '/bootstrap/js/bootstrap.js?20250608',
-    '/bootstrap/js/main.js?20250608',
-    '/bootstrap/js/wow.min.js?20250608',
-    '/bootstrap/js/multimodal.min.js?20250608',
-    '/js/modernizr-custom.js?20250608',
-    '/js/bootstrap-select/js/bootstrap-select.min.js?20250608',
-    '/js/common.js?20250608',
-    '/js/mis_grid.js?20250608',
-    '/js/performance.now-polyfill.js?20250608',
-    '/js/mdb-sortable/js/addons/jquery-ui-touch-punch.min.js?20250608',
-    '/js/jquery.taphold.js?20250608',
-    '/js/jquery.patch.js?20250608',
-    '/js/jquery.cookie.js?20250608',
-    '/nf/commons/v2.1.1/js/jquery.blockUI.js?20250608'
+    '/bootstrap/js/jquery.min.js?20250612',
+    '/bootstrap/js/bootstrap.js?20250612',
+    '/bootstrap/js/main.js?20250612',
+    '/bootstrap/js/wow.min.js?20250612',
+    '/bootstrap/js/multimodal.min.js?20250612',
+    '/js/modernizr-custom.js?20250612',
+    '/js/bootstrap-select/js/bootstrap-select.min.js?20250612',
+    '/js/common.js?20250612',
+    '/js/mis_grid.js?20250612',
+    '/js/performance.now-polyfill.js?20250612',
+    '/js/mdb-sortable/js/addons/jquery-ui-touch-punch.min.js?20250612',
+    '/js/jquery.taphold.js?20250612',
+    '/js/jquery.patch.js?20250612',
+    '/js/jquery.cookie.js?20250612',
+    '/nf/commons/v2.1.1/js/jquery.blockUI.js?20250612'
 ]
 
 # sess = requests.Session()
@@ -286,6 +286,7 @@ def get_history_data(dept_no: str, sess: requests.Session) -> List:
     for path in js_paths:
         res = fetch_js(sess, path)
     res = save_query(sess, dept_no)
+    print(res.text)
     url = 'https://course-query.acad.ncku.edu.tw/index.php?c=qry11215&m=save_qry' + res.text
     res = sess.get(url)
     result = get_info_from_res(res)

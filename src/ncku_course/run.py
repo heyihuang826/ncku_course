@@ -1,4 +1,6 @@
 from io import BytesIO
+
+import requests
 from .crawler import crawler
 from .excel import to_excel
 from .authenticate import authenticate
@@ -21,8 +23,8 @@ def run(save: str = 'local'):
     onedrive: save to onedrive with provided information in .env or pass by argument
     both: save to both local and onedrive
     '''
-    session = authenticate(3)
-    # session = requests.Session() #skip robot authentication
+    # session = authenticate(3)
+    session = requests.Session() #skip robot authentication
 
     if not session:
         raise Exception("can not authenticate.")
