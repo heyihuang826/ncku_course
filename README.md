@@ -40,7 +40,7 @@ Efficiently and reliably scrapes course information from National Cheng Kung Uni
 
 ## Example 成果範例
 
-Download `[example_202409.xlsx](example_202409.xlsx)` for example.
+Download [example_202409.xlsx](example_202409.xlsx) for example.
 
 下載 [example_202409.xlsx](example_202409.xlsx) 作為範例。
 
