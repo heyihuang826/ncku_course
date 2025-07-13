@@ -35,13 +35,14 @@ Efficiently and reliably scrapes course information from National Cheng Kung Uni
 
 - 將結果 excel 檔案上傳到 onedrive（需要設定一些資訊）。
 - 僅在該本地儲存整理好的 excel 檔案（透過在 main.py 中為函數 run 設定 args save 為 local ）。
+
 ---
 
 ## Example 成果範例
 
 Download `example_202409.xlsx` for example.
 
-下載 example_202409.xlsx 作為範例。
+下載 [example_202409.xlsx](example_202409.xlsx) 作為範例。
 
 ## Usage
 
