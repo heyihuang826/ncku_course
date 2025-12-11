@@ -6,6 +6,12 @@ Efficiently and reliably scrapes course information from National Cheng Kung Uni
 
 ---
 
+## What can this project do?
+
+- Scrape the latest NCKU course listings on demand or on a schedule.
+- Organize the data into a ready-to-use Excel file.
+- Save the result locally or automatically upload it to OneDrive/GitHub Actions storage, depending on your settings.
+
 ## Feature
 
 - Organized the course information of NCKU and then prepare an `excel` file.
