@@ -68,8 +68,8 @@ def save_query(sess: requests.Session, dept_code: str):
         'teaname': '',
         'syear_b': '114',
         'syear_e': '114',
-        'sem_b': '1',
-        'sem_e': '1',
+        'sem_b': '2',
+        'sem_e': '2',
         'dept_no': dept_code
     }
     res = sess.post(url, headers=headers, data=payload)
