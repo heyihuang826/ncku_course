@@ -2,3 +2,18 @@ date: 20250302 02:23
 bug describe: Raise `KeyError: access_token` while getting refresh token and access_token
 main problem: `refresh token` is not true
 fix: update `refresh token` in `.env` and github secret
+main problem: refresh token expire
+
+renew step:
+1. set new client secret
+2. GET https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=<CLIENT_ID>&response_type=code&redirect_uri=<REDIRECT_URI>&response_mode=query&scope=openid%20profile%20offline_access%20https%3A%2F%2Fgraph.microsoft.com%2FUser.Read&state=
+3. receive https://www.google.com/?code=<AUTH_CODE> in redirect url
+4. curl -sS -X POST "https://login.microsoftonline.com/common/oauth2/v2.0/token" ^
+  -H "Content-Type: application/x-www-form-urlencoded" ^
+  --data-urlencode "client_id=<CLIENT_ID>" ^
+  --data-urlencode "grant_type=authorization_code" ^
+  --data-urlencode "code=<AUTH_CODE>" ^
+  --data-urlencode "redirect_uri=<REDIRECT_URI>" ^
+  --data-urlencode "client_secret=<CLIENT_SECRET>" ^
+  --data-urlencode "scope=openid profile offline_access https://graph.microsoft.com/User.Read"
+5. receive access_token and refresh_token
